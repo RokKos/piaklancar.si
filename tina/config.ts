@@ -21,7 +21,7 @@ export default defineConfig({
   },
   media: {
     tina: {
-      mediaRoot: "",
+      mediaRoot: "../src/assets/images",
       publicFolder: "public",
     },
   },
@@ -41,12 +41,48 @@ export default defineConfig({
             required: true,
           },
           {
+            type: "datetime",
+            name: "published",
+            label: "Published Date",
+            required: true,
+            ui: { dateFormat: "YYYY-MM-DD" }
+          },
+          {
+            type: "datetime",
+            name: "updated",
+            label: "Updated Date",
+            required: false,
+            ui: { dateFormat: "YYYY-MM-DD" }
+          },
+          {
+            type: "string",
+            name: "description",
+            label: "Short Description",
+          },
+          {
+            type: "image",
+            name: "image",
+            label: "Post Cover Image",
+            // Point this at your images folder
+            ui: {
+              // This will auto-populate with image files from src/assets/images
+              directory: "src/assets/images",
+              previewSrc: true,
+            }
+          },
+          {
+            type: "boolean",
+            name: "draft",
+            label: "Draft?",
+          },
+          {
             type: "rich-text",
             name: "body",
-            label: "Body",
-            isBody: true,
+            label: "Main Content",
+            isBody: true, // Ensures WYSIWYG editing for the Markdown content
           },
-        ],
+        ]
+        ,
       },
     ],
   },
