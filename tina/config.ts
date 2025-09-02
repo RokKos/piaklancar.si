@@ -63,6 +63,7 @@ export default defineConfig({
             type: "image",
             name: "image",
             label: "Post Cover Image",
+            required: false,
             // Point this at your images folder
             ui: {
               // This will auto-populate with image files from src/assets/images
@@ -83,6 +84,20 @@ export default defineConfig({
           },
         ]
         ,
+      },
+
+      {
+        name: "about",
+        label: "About",
+        path: "src/content/spec",
+        fields: [
+          {
+            type: "rich-text",
+            name: "body",
+            label: "Main Content",
+            isBody: true, // Ensures WYSIWYG editing for the Markdown content
+          },
+        ],
       },
     ],
   },
