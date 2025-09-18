@@ -1,6 +1,6 @@
 ---
 title: GF Shoyu
-published: 2025-02-05T00:00:00.000Z
+published: 2022-02-05T00:00:00.000Z
 description: Pod imenom GF Shoyu raziskujem svet elektronske glasbe kot DJ-ka in rezidentka v ljubljanskem Klubu Monokel. Preverite moje sete in utrinke z nastopov, polnih energije in hipnotičnih ritmov.
 image: ../../assets/images/gf_shoyu.jpg
 ---
